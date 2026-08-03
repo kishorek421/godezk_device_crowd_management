@@ -2,6 +2,7 @@
 # Triggers on push to main/dev/staging branches and manual dispatch
 # Builds the Docker image, pushes it to Docker Hub, and updates the devops repo
 # so ArgoCD can sync the new image tag to the target Kubernetes environment.
+# Human-readable workflow name shown in the GitHub Actions UI
 name: Build and Deploy Crowd Management Service
 
 on:
@@ -19,9 +20,11 @@ on:
   # Allow manual trigger from GitHub Actions UI
   workflow_dispatch:
 
+# Global environment variables shared across build and push steps
 env:
   IMAGE_NAME: kishore2712/godezk_device_crowd_management
 
+# Jobs triggered by the events above
 jobs:
   # Main job to build Docker image and push to registry
   build-and-push:
