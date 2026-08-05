@@ -37,7 +37,7 @@ load_dotenv(BASE_DIR / ".env")
 # ── Config ────────────────────────────────────────────────────────────
 MODEL_PATH           = os.environ.get("MODEL_PATH",           "models/yolo11s.pt")
 CONFIDENCE_THRESHOLD = float(os.environ.get("CONFIDENCE_THRESHOLD", "0.50"))
-MAX_PEOPLE           = int(os.environ.get("MAX_PEOPLE",        "5"))
+MAX_PEOPLE           = int(os.environ.get("MAX_PEOPLE",        "0"))
 IMG_SIZE             = int(os.environ.get("IMG_SIZE",          "640"))
 LOG_LEVEL            = os.environ.get("LOG_LEVEL",            "INFO")
 ALERT_URL            = os.environ.get("ALERT_URL",            "").strip()

@@ -43,8 +43,8 @@ class ZoneCapacityEstimator:
     def __init__(self, min_capacity: int = 1, max_capacity: int = 100) -> None:
         self.min_capacity = min_capacity
         self.max_capacity = max_capacity
-        self.use_chairs = _env_bool("AUTO_ZONE_USE_CHAIRS", True)
-        self.use_table_area = _env_bool("AUTO_ZONE_USE_TABLE_AREA", True)
+        self.use_chairs = _env_bool("AUTO_ZONE_USE_CHAIRS", False)
+        self.use_table_area = _env_bool("AUTO_ZONE_USE_TABLE_AREA", False)
         self.use_spatial_density = _env_bool("AUTO_ZONE_USE_SPATIAL_DENSITY", True)
         self._cache: dict[str, dict[str, Any]] = {}
 
