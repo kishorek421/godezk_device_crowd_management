@@ -107,7 +107,7 @@ _zone_estimator = None
 def _get_zone_estimator():
     global _zone_estimator
     if _zone_estimator is None:
-        from zone import ZoneCapacityEstimator
+        from src.zone import ZoneCapacityEstimator
         _zone_estimator = ZoneCapacityEstimator()
     return _zone_estimator
 
